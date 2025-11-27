@@ -33,6 +33,48 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **Unsplash API** (Imagens dinâmicas)
 - **Git & GitHub** (Versionamento)
 
+🔮 Próximos Passos (Roadmap)
+Estamos trabalhando constantemente em melhorias. As próximas atualizações incluirão:
+
+[ ] Integração com Nova API: Implementação de uma API específica de dados automotivos para trazer fichas técnicas reais detalhadas.
+
+[ ] Página de detalhes do veículo.
+
+[ ] Filtros avançados por ano e marca.
+
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/eduardobrandao3">
+        <img src="https://github.com/eduardobrandao3" width="100px;" alt="Foto do Eduardo"/><br>
+        <sub>
+          <b>Eduardo Brandão</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/sabjoao">
+        <img src="https://github.com/sabjoao.png" width="100px;" alt="Foto do João Pedro"/><br>
+        <sub>
+          <b>João Pedro</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/thiagowq">
+        <img src="https://github.com/thiagowq.png" width="100px;" alt="Foto do Thiago"/><br>
+        <sub>
+          <b>Thiago da Cruz</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## 📂 Como rodar o projeto
 
 Pré-requisitos: Você precisa ter o [Node.js](https://nodejs.org/) instalado para rodar o Tailwind.
@@ -52,3 +94,4 @@ $ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 
 # 5. Abra o arquivo 'home.html' ou 'pesquisa.html' no seu navegador
 # (Recomendado usar a extensão "Live Server" do VS Code)
+
