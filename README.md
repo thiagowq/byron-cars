@@ -50,9 +50,9 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="https://github.com/eduardobrandao3">
-        <img src="https://github.com/eduardobrandao3" width="100px;" alt="Foto do Eduardo"/><br>
+        <img src="https://github.com/eduardobrandao3.png" width="100px;" alt="Foto do Eduardo"/><br>
         <sub>
-          <b>Eduardo Brandão</b>
+          <b>Eduardo</b>
         </sub>
       </a>
     </td>
@@ -68,7 +68,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="https://github.com/thiagowq">
         <img src="https://github.com/thiagowq.png" width="100px;" alt="Foto do Thiago"/><br>
         <sub>
-          <b>Thiago da Cruz</b>
+          <b>Thiago</b>
         </sub>
       </a>
     </td>
