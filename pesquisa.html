@@ -96,27 +96,45 @@
 
     <section
       id="aba-pesquisa"
-      class="hidden bg-red-700 py-10 flex flex-col items-center justify-center gap-4 shadow-lg"
+      class="hidden bg-red-700 py-10 flex flex-col items-center justify-center gap-4 shadow-lg p-4"
     >
       <label class="text-white text-2xl font-bold font-barlow uppercase">
         Qual carro você procura?
       </label>
 
-      <div class="flex w-full max-w-2xl px-4">
-        <input
-          type="text"
-          id="input-pesquisa"
-          placeholder="Ex: Fiat Uno, Ferrari, Porsche..."
-          class="bg-white w-full p-4 text-black rounded-l-lg focus:outline-none font-barlow text-xl"
-        />
+      <div class="flex flex-col w-full max-w-2xl px-4">
+        <div class="m-4">
+          <label class="text-white text-xl" for="input-pesquisa"
+            >Digite a Marca:</label
+          >
+          <input
+            type="text"
+            id="input-pesquisa"
+            placeholder="Ex: Audi, Fiat, Ferrari, Porsche..."
+            class="bg-white w-full p-4 text-black rounded-lg focus:outline-none font-barlow text-xl"
+          />
+        </div>
+        <div class="m-4">
+          <label class="text-white text-xl" for="input-modelo"
+            >Digite o modelo:</label
+          >
 
-        <button
-          id="btn-pesquisar"
-          class="bg-black text-white px-8 py-4 rounded-r-lg font-bold hover:bg-gray-800 transition-colors uppercase flex items-center gap-2"
-        >
-          <img src="../imagens/icon-search.png" class="w-6 h-6" alt="Lupa" />
-          Buscar
-        </button>
+          <input
+            type="text"
+            id="input-modelo"
+            placeholder="Ex: A4, Uno, 296 GTB, Macan..."
+            class="bg-white w-full p-4 text-black rounded-lg focus:outline-none font-barlow text-xl"
+          />
+        </div>
+        <div class="flex justify-center items-center m-4">
+          <button
+            id="btn-pesquisar"
+            class="bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition-colors uppercase flex items-center gap-2 cursor-pointer text-center"
+          >
+            <img src="./imagens/icon-search.png" class="w-6 h-6" alt="Lupa" />
+            Buscar
+          </button>
+        </div>
       </div>
     </section>
 
@@ -197,6 +215,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="pesquisa.js"></script>
   </body>
