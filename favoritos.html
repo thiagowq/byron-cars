@@ -16,10 +16,11 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- HEADER FAVORITOS -->
     <header
-      class="bg-black w-full h-20 flex font-bold text-base gap-3 items-center justify-evenly text-center font-barlow lg:h-28 lg:text-2xl sticky"
+      class="bg-black w-full h-20 flex font-bold text-base gap-3 items-center justify-evenly text-center font-barlow lg:h-28 lg:text-2xl sticky top-0 z-20"
     >
       <div class="w-1/5 h-full">
         <img
@@ -32,27 +33,27 @@
         class="h-1/2 flex flex-row justify-center items-center text-center w-1/5 gap-2"
       >
         <i class="fa-regular fa-house" style="color: #c62829"></i>
-        <a href="./home.html" class="text-white">Home</a>
+        <a href="index.html" class="text-white">Home</a>
       </div>
 
       <div
         class="bg-white h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2"
       >
         <i class="fa-regular fa-star" style="color: #c62829"></i>
-        <a href="./favoritos.html" class="text-[#c62829]">Favoritos</a>
+        <a href="favoritos.html" class="text-[#c62829]">Favoritos</a>
       </div>
 
       <div
         class="h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2"
       >
         <i class="fa-solid fa-magnifying-glass" style="color: #c62829"></i>
-        <a href="./pesquisar.html" class="text-white">Pesquisar</a>
+        <a href="pesquisa.html" class="text-white">Pesquisar</a>
       </div>
     </header>
 
     <!-- SEÇÃO QUE INFORMA QUANTIDADE DE CARROS FAVORITADOS E OS POSSÍVEIS FILTROS -->
     <section
-      class="bg-[#c62829] text-white flex flex-row gap-8 h-36 justify-center font-bold lg:text-2xl lg:gap-40"
+      class="bg-[#c62829] text-white flex flex-row gap-8 h-36 justify-center font-bold md:text-2xl lg:text-3xl lg:gap-40"
     >
       <div class="flex flex-row justify-center items-center text-center gap-2">
         <i class="fa-solid fa-car" style="color: #ffffff"></i>
@@ -66,83 +67,43 @@
     </section>
 
     <!-- SEÇÃO CARDS - CARROS FAVORITADOS -->
-    <main class="flex flex-col gap-8 p-2 md:flex-row">
-      <!-- CARD 1 - TESTE -->
-      <div class="card bg-black text-white p-4 flex flex-col">
-        <div class="p-2">
-          <img
-            src="https://reparacaoautomotiva.com.br/wp-content/uploads/2021/12/1992_Fiat_Uno_IE_1.0_Front-1-1024x488.jpg"
-            alt="imagem teste fiat uno"
-          />
-        </div>
-        <h2 class="text-center text-3xl font-bold p-">Fiat Uno</h2>
-
-        <div class="flex justify-between">
-          <div class="text-xl font-bold p-2">
-            <h3 class="text-2xl">Especificações</h3>
-            <p>Torque:</p>
-            <p>Ano:</p>
-            <p>Velocidade máxima:</p>
-          </div>
-          <div class="flex">
-            <button>
-              <i class="fa-solid fa-star text-6xl" style="color: #c62829"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 2 - TESTE -->
-      <div class="card bg-black text-white p-4 flex flex-col">
-        <div class="p-2">
-          <img
-            src="https://i0.statig.com.br/bancodeimagens/dr/v1/yr/drv1yruhjw0ta72okgz7c5hec.jpg"
-            alt="imagem teste corsa"
-          />
-        </div>
-        <h2 class="text-center text-3xl font-bold p-">Corsa</h2>
-
-        <div class="flex justify-between">
-          <div class="text-xl font-bold p-2">
-            <h3 class="text-2xl">Especificações</h3>
-            <p>Torque:</p>
-            <p>Ano:</p>
-            <p>Velocidade máxima:</p>
-          </div>
-          <div class="flex">
-            <button>
-              <i class="fa-solid fa-star text-6xl" style="color: #c62829"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
+    <main
+      id="container-favoritos"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 py-10 max-w-7xl mx-auto min-h-[50vh]"
+    ></main>
 
     <!-- FOOTER -->
-    <footer class="font-bold bg-black">
-      <h2 class="text-[#c62829]">Entre em contato:</h2>
+    <footer
+      class="font-bold bg-black flex flex-col gap-5 md:flex-row md:p-7 md:text-xl"
+    >
+      <h2 class="text-[#c62829] text-3xl p-2">Entre em contato:</h2>
 
-      <div class="text-white">
-        <div>
+      <div class="text-white flex flex-col gap-2 px-10">
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-linkedin" style="color: #c62829"></i>
           <a
             href="https://www.linkedin.com/in/eduardobrandaorocha/"
             target="_blank"
             >LinkedIn: eduardobrandaorocha</a
           >
         </div>
-        <div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-phone" style="color: #c62829"></i>
           <a
             href="https://api.whatsapp.com/send/?phone=5535999305963&text&type=phone_number&app_absent=0"
             target="_blank"
             >Número: (35)99930-5963</a
           >
         </div>
-        <div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-envelope" style="color: #c62829"></i>
           <a href="mailto:eduardo@byronsolutions.com" target="_blank"
             >E-mail: eduardo@byronsolutions.com</a
           >
         </div>
       </div>
     </footer>
+
+    <script src="favoritos.js"></script>
   </body>
 </html>
