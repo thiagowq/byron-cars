@@ -71,27 +71,27 @@
           class="h-full"
         />
       </div>
-      <div
-        class="h-1/2 flex flex-row justify-center items-center text-center w-1/5 gap-2"
-      >
-        <i class="fa-regular fa-house" style="color: #c62829"></i>
-        <a href="index.html" class="text-white">Home</a>
-      </div>
-
-      <div
-        class="h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2"
-      >
-        <i class="fa-regular fa-star" style="color: #c62829"></i>
-        <a href="favoritos.html" class="text-white">Favoritos</a>
-      </div>
-
-      <div
-        class="h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2 bg-white cursor-pointer"
-        id="btn-abrir-pesquisa"
-      >
-        <i class="fa-solid fa-magnifying-glass" style="color: #c62829"></i>
-        <p class="text-[#c62829]">Pesquisar</p>
-      </div>
+      <nav class="flex w-4/5 h-full items-center justify-evenly">
+        <div
+          class="h-1/2 flex flex-row justify-center items-center text-center w-1/5 gap-2"
+        >
+          <i class="fa-regular fa-house" style="color: #c62829"></i>
+          <a href="index.html" class="text-white">Home</a>
+        </div>
+        <div
+          class="h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2"
+        >
+          <i class="fa-regular fa-star" style="color: #c62829"></i>
+          <a href="favoritos.html" class="text-white">Favoritos</a>
+        </div>
+        <div
+          class="h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2 bg-white cursor-pointer"
+          id="btn-abrir-pesquisa"
+        >
+          <i class="fa-solid fa-magnifying-glass" style="color: #c62829"></i>
+          <p class="text-[#c62829]">Pesquisar</p>
+        </div>
+      </nav>
     </header>
 
     <section
@@ -102,21 +102,39 @@
         Qual carro você procura?
       </label>
 
-      <div class="flex w-full max-w-2xl px-4">
-        <input
-          type="text"
-          id="input-pesquisa"
-          placeholder="Ex: Fiat Uno, Ferrari, Porsche..."
-          class="bg-white w-full p-4 text-black rounded-l-lg focus:outline-none font-barlow text-xl"
-        />
+      <div class="flex flex-col w-full max-w-2xl px-4">
+        <div class="m-4">
+          <label class="text-white text-xl" for="input-pesquisa"
+            >Digite a Marca:</label
+          >
+          <input
+            type="text"
+            id="input-pesquisa"
+            placeholder="Ex: Audi, Fiat, Ferrari, Porsche..."
+            class="bg-white w-full p-4 text-black rounded-lg focus:outline-none font-barlow text-xl"
+          />
+        </div>
+        <div class="m-4">
+          <label class="text-white text-xl" for="input-modelo"
+            >Digite o modelo:</label
+          >
 
-        <button
-          id="btn-pesquisar"
-          class="bg-black text-white px-8 py-4 rounded-r-lg font-bold hover:bg-gray-800 transition-colors uppercase flex items-center gap-2"
-        >
-          <img src="../imagens/icon-search.png" class="w-6 h-6" alt="Lupa" />
-          Buscar
-        </button>
+          <input
+            type="text"
+            id="input-modelo"
+            placeholder="Ex: A4, Uno, 296 GTB, Macan..."
+            class="bg-white w-full p-4 text-black rounded-lg focus:outline-none font-barlow text-xl"
+          />
+        </div>
+        <div class="flex justify-center items-center m-4">
+          <button
+            id="btn-pesquisar"
+            class="bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition-colors uppercase flex items-center gap-2 cursor-pointer text-center"
+          >
+            <img src="./imagens/icon-search.png" class="w-6 h-6" alt="Lupa" />
+            Buscar
+          </button>
+        </div>
       </div>
     </section>
 
@@ -197,6 +215,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="pesquisa.js"></script>
   </body>
