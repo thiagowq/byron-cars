@@ -8,6 +8,7 @@ function carregarFavoritos() {
 
   containerFavoritos.innerHTML = "";
 
+  qtFav.innerText = `Favoritados: ${favoritos.length} carros`;
   if (favoritos.length === 0) {
     containerFavoritos.innerHTML = `
             <div class="text-center w-full col-span-3 mt-10">
@@ -21,8 +22,6 @@ function carregarFavoritos() {
   favoritos.forEach((carro) => {
     containerFavoritos.innerHTML += criarCardFavorito(carro);
   });
-
-  qtFav.innerText = `Favoritados: ${favoritos.length} carros`
 }
 
 // 2. Criação de Cards (Cópia exata do layout de pesquisa.js)
