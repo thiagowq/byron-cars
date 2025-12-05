@@ -16,9 +16,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="w-screen overflow-x-hidden">
+  <body>
     <header
-      class="bg-black w-full h-20 flex font-bold text-base gap-3 items-center justify-evenly text-center font-barlow lg:h-28 lg:text-2xl fixed z-20"
+      class="bg-black w-full h-20 flex font-bold text-base gap-3 items-center justify-evenly text-center font-barlow lg:h-28 lg:text-2xl sticky top-0 z-20"
     >
       <div class="w-1/5 h-full">
         <img
@@ -32,7 +32,7 @@
           class="bg-white h-1/2 flex flex-row justify-center items-center text-center w-1/5 gap-2"
         >
           <i class="fa-regular fa-house" style="color: #c62829"></i>
-          <a href="index.html" class="text-[#c62829]">Home</a>
+          <a href="index.html" class="text-[#c62829]">Home</a> 
         </div>
         <div
           class="h-1/2 w-1/5 flex flex-row justify-center items-center text-center gap-2"
@@ -50,13 +50,11 @@
     </header>
 
     <section
-      class="bg-[url('../imagens/ferrariGemini.png')] bg-cover bg-center h-[450px] relative lg:h-[700px]"
+      class="bg-[url('../src/img/ferrariGemini.png')] bg-cover bg-center h-[450px] relative lg:h-[700px]"
     >
       <div class="absolute inset-0 bg-black/40"></div>
 
-      <div
-        class="absolute bottom-0 right-0 flex flex-col z-10 text-right lg:p-16 lg:text-right"
-      >
+      <div class="absolute bottom-4 right-4 z-10 max-w-[90%] text-right">
         <h3
           class="text-white text-2xl font-bold font-sans lg:text-6xl lg:whitespace-normal"
         >
@@ -76,17 +74,17 @@
     ></section>
 
     <section
-      class="bg-[url('../imagens/nissan.png')] bg-cover bg-center h-[450px] relative mt-20"
+      class="bg-[url('../src/img/nissan.png')] bg-cover bg-center h-[450px] relative mt-20"
     >
       <div class="absolute inset-0"></div>
       <div class="p-4">
-        <div class="text-red-500 text-5xl font-bold">
+        <div class="text-red-500 text-3xl lg:text-5xl font-bold">
           <h1>CONHECA UM POUCO</h1>
           <h1>MAIS SOBRE NÓS</h1>
         </div>
         <div class="absolute bottom-0 right-0 p-4">
           <p
-            class="whitespace-normal font-bold text-xl text-red-500 text-right max-w-xs sm:max-w-md"
+            class="whitespace-normal font-bold text-sm md:text-3xl text-red-500 text-right max-w-xs sm:max-w-md"
           >
             Somos um site com um próposito único, difundir o amor pelos carros,
             mostrando cada detalhe e especificação que fez com que esse amor
@@ -97,7 +95,7 @@
     </section>
 
     <section class="bg-black h-[350px] text-red-500 font-bold">
-      <h1 class="text-5xl py-10 text-center">DESENVOLVEDORES</h1>
+      <h1 class="text-3xl lg:text-5xl py-10 text-center">DESENVOLVEDORES</h1>
       <div class="text-xl flex flex-row items-center justify-around p-9 mx-auto gap-4">
         <h1>João Pedro</h1>
         <h1>Eduardo</h1>
@@ -106,19 +104,19 @@
     </section>
 
     <section
-      class="bg-[url('../imagens/audittrs.png')] bg-cover bg-center h-[600px] relative p-4 flex flex-col gap-4"
+      class="bg-[url('../src/img/audittrs.png')] bg-cover bg-center h-[600px] relative p-4 flex flex-col gap-4"
     >
       <h1 class="text-red-500 font-bold text-5xl lg:text-7xl">ENTRE EM CONTATO</h1>
       <div class="mt-3 font-bold">
         <h1>João Pedro Sabino</h1>
         <div class="flex flex-col gap-1 text-black">
-          <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-sabino-07b915377/">
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-sabino-07b915377/"  target="_blank">
             <i class="fa-brands fa-linkedin text-3xl"></i></a
           >
-          <a href="mailto:sabino.jp03@gmail.com">
+          <a href="mailto:sabino.jp03@gmail.com" target="_blank">
             <i class="fa-solid fa-envelope text-3xl"></i></a
           >
-          <a href="https://github.com/sabjoao">
+          <a href="https://github.com/sabjoao" target="_blank">
             <i class="fa-brands fa-github text-3xl"></i></a
           >
         </div>
@@ -127,13 +125,13 @@
       <div class="font-bold mt-3 text-white">
         <h1>Thiago da Cruz</h1>
         <div class="flex flex-col">
-          <a href="https://www.linkedin.com/in/thiago-da-cruz-41bb08281/">
+          <a href="https://www.linkedin.com/in/thiago-da-cruz-41bb08281/" target="_blank">
             <i class="fa-brands fa-linkedin text-3xl"></i></a
           >
-          <a href="mailto:tj3137488@gmail.com">
+          <a href="mailto:tj3137488@gmail.com" target="_blank">
             <i class="fa-solid fa-envelope text-3xl"></i></a
           >
-          <a href="https://github.com/thiagowq">
+          <a href="https://github.com/thiagowq" target="_blank">
             <i class="fa-brands fa-github text-3xl"></i></a
           >
         </div>
@@ -142,13 +140,13 @@
       <div class="font-bold mt-3 text-red-500">
         <h1>Eduardo</h1>
         <div class="flex flex-col">
-          <a href="https://www.linkedin.com/in/eduardobrandaorocha/">
+          <a href="https://www.linkedin.com/in/eduardobrandaorocha/" target="_blank"> 
             <i class="fa-brands fa-linkedin text-3xl"></i></a
           >
-          <a href="mailto:eduardo@byronsolutions.com">
+          <a href="mailto:eduardo@byronsolutions.com" target="_blank">
             <i class="fa-solid fa-envelope text-3xl"></i></a
           >
-          <a href="https://github.com/eduardobrandao3">
+          <a href="https://github.com/eduardobrandao3" target="_blank">
             <i class="fa-brands fa-github text-3xl"></i></a
           >
         </div>
