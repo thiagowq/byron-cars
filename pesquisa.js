@@ -101,21 +101,21 @@ function criarCard(imagemUrl, titulo, displacement, year, fuel_type) {
 
 // FUNÇÃO PARA BUSCAR NA API NINJA
 async function buscaCarroApiNinja(valorMarca, valorModelo) {
-    try {
-        const urlApiNinja = "https://api.api-ninjas.com/v1/cars?";
-        let resNinja = await axios.get(
-        urlApiNinja + `make=${valorMarca}&model=${valorModelo}`,
-        {
-            headers: {
-            "X-Api-Key": "UoAh618Z/ETvz3VTgus6Ng==ukVacKEXL0LNXuoh",
-            },
-        }
-        );
-        // RETORNAR OS DADOS QUE DESEJO
-        return resNinja.data[0];
-    } catch (err) {
-        return 0;
-    }
+  try {
+    const urlApiNinja = "https://api.api-ninjas.com/v1/cars?";
+    let resNinja = await axios.get(
+      urlApiNinja + `make=${valorMarca}&model=${valorModelo}`,
+      {
+        headers: {
+          "X-Api-Key": "UoAh618Z/ETvz3VTgus6Ng==ukVacKEXL0LNXuoh",
+        },
+      }
+    );
+    // RETORNAR OS DADOS QUE DESEJO
+    return resNinja.data[0];
+  } catch (err) {
+    return 0;
+  }
 }
 // 4. Função para buscar na API
 async function buscarCarros() {
@@ -123,7 +123,6 @@ async function buscarCarros() {
   let valorMarca = inputMarca.value.trim();
   let valorModelo = inputModelo.value.trim();
   let resultApiNinja = 0;
-  
 
   if (valorMarca === "") {
     alert("Informe uma marca de carro");
@@ -156,7 +155,7 @@ async function buscarCarros() {
     if (resultApiNinja !== 0) {
       const foto = dados.results[0];
       const imgLink = foto.urls.regular;
-      const titulo = termo //|| termo;
+      const titulo = termo; //|| termo;
       container.innerHTML += criarCard(
         imgLink,
         titulo,
@@ -198,23 +197,66 @@ if (btnAbrirPesquisa && abaPesquisa) {
 // --- vitrine para aparecer carros na hora em que a página carregar ---
 async function carregarDestaques() {
   container.innerHTML =
-    '<p class="text-white text-center text-xl w-full col-span-3">Carregando destaques da garagem...</p>';
+      '<p class="text-white text-center text-xl w-full col-span-3">Carregando destaques da garagem...</p>';
 
-  try {
-    const url = `https://api.unsplash.com/search/photos?query=sport cars&per_page=6&client_id=${accessKey}&orientation=landscape`;
-    const resposta = await fetch(url);
-    const dados = await resposta.json();
+  const cache = localStorage.getItem("destaquesCarros");
+  if(cache){
+    const carrosDestSalvos = JSON.parse(cache);
 
     container.innerHTML = "";
 
-    if (dados.results.length > 0) {
-      dados.results.forEach((foto) => {
-        container.innerHTML += criarCard(
-          foto.urls.regular,
-          foto.alt_description || "Super Carro"
-        );
-      });
+    carrosDestSalvos.forEach(carro => {
+      container.innerHTML += criarCard(
+        carro.img,
+        carro.nome,
+        carro.displacement,
+        carro.year,
+        carro.fuel_type
+      )
+    });
+    return;
+  }
+  try {
+    const carrosDestaques = [
+      { marca: "Lamborghini", modelo: "Urus" },
+      { marca: "Ferrari", modelo: "458 Italia" },
+      { marca: "Lamborghini", modelo: "Huracán" },
+      { marca: "Lamborghini", modelo: "Aventador" },
+      { marca: "Ferrari", modelo: "488 GTB" },
+      { marca: "Lamborghini", modelo: "Gallardo" },
+    ];
+
+    container.innerHTML = "";
+
+    const listaCarrosFinal = []; //salvar temporariamente
+    let resNin = 0;
+
+    for (carro of carrosDestaques) {
+      resNin = await buscaCarroApiNinja(carro.marca, carro.modelo);
+      const buscaNom = `${carro.marca} ${carro.modelo}`;
+      const url = `https://api.unsplash.com/search/photos?query=${buscaNom}&per_page=1&client_id=${accessKey}&orientation=landscape`;
+      const resposta = await fetch(url);
+      const dados = await resposta.json();
+      const foto = dados.results[0];
+      const imgLink = foto.urls.regular;
+      container.innerHTML += criarCard(
+        imgLink,
+        buscaNom,
+        resNin.displacement,
+        resNin.year,
+        resNin.fuel_type
+      );
+
+      listaCarrosFinal.push({
+        img: imgLink,
+        nome: buscaNom,
+        displacement: resNin.displacement,
+        year: resNin.year,
+        fuel_type: resNin.fuel_type
+      })
     }
+    localStorage.setItem("destaquesCarros", JSON.stringify(listaCarrosFinal));
+    
   } catch (erro) {
     console.error("Erro nos destaques:", erro);
     container.innerHTML = "";
